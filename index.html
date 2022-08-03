@@ -63,101 +63,139 @@
 				</div>
 			</div>
             <div>
-                <table id="homework">
-                    <tr>
-                      <th>ACTIVE ASSIGNMENTS</th>
-                      <th>RELEASED <span class="free-space">DUE(PDT) </span></th>
-                      <th>SUBMISSIONS</th>
-                      <th>%GRADED</th>
-                      <th>Published</th>
-
-                    </tr>
-                    <tr>
-                      <td>HW5</td>
-                      <td>
-                        <meter value="55.93" min="0" max="120.47" title="GB">
-                            <div class="meter-gauge">
-                              <span style="width: 46.42%;"></span>
-                            </div>
-                        </meter>  
-                        <p>JUL 26 AT 12:00AM <span class="free-space">JUL 30 AT 11:59 PM</span></p>                        
-                      </td>
-                      <td>10</td>
-                      <td>1</td>
-                      <td>10</td>
-
-                    </tr>
-                    <tr>
-                      <td>HW4 - UPDATED</td>
-                      <td>
-                        <meter value="55.93" min="0" max="120.47" title="GB">
-                            <div class="meter-gauge">
-                              <span style="width: 46.42%;"></span>
-                            </div>
-                        </meter>  
-                        <p>JUL 26 AT 12:00AM <span class="free-space">JUL 30 AT 11:59 PM</span></p>                        
-                      </td>
-                      <td>10</td>
-                      <td>1</td>
-                      <td>10</td>
-                    </tr>  
-                    <tr>
-                      <td>HW3</td>
-                      <td>
-                        <meter value="55.93" min="0" max="120.47" title="GB">
-                            <div class="meter-gauge">
-                              <span style="width: 1.42%;">Disk Usage - 55.93GB out of 120GB</span>
-                            </div>
-                        </meter> 
-                        <p>JUL 26 AT 12:00AM <span class="free-space">JUL 30 AT 11:59 PM</span></p>                                                 
-                      </td>
-                      <td>10</td>
-                      <td>1</td>
-                      <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Midterm Exam</td>
-                        <td>
-                            <meter value="55.93" min="0" max="120.47" title="GB">
-                                <div class="meter-gauge">
-                                  <span style="width: 46.42%;">Disk Usage - 55.93GB out of 120GB</span>
-                                </div>
-                            </meter>
-                            <p>JUL 26 AT 12:00AM <span class="free-space">JUL 30 AT 11:59 PM</span></p>                                                  
-                        </td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>10</td>
-                      </tr>
-                      <tr>
-                        <td>HW4 - OLD</td>
-                        <td>
-                            <meter value="55.93" min="0" max="120.47" title="GB">
-                                <div class="meter-gauge">
-                                  <span style="width: 46.42%;">Disk Usage - 55.93GB out of 120GB</span>
-                                </div>
-                            </meter>   
-                            <p>JUL 26 AT 12:00AM <span class="free-space">JUL 30 AT 11:59 PM</span></p>                                                                        
-                        </td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>10</td>
-                      </tr>
-                      <tr>
-                        <td>HW2</td>
-                        <td>
-                            <meter value="55.93" min="0" max="120.47" title="GB">
-                                <div class="meter-gauge">
-                                  <span style="width: 46.42%;"></span>
-                                </div>
-                            </meter>   
-                            <p>JUL 26 AT 12:00AM <span class="free-space">JUL 30 AT 11:59 PM</span></p>                                                                        
-                        </td>
-                        <td>10</td>
-                        <td>1</td>
-                        <td>10</td>
-                      </tr>
-                  </table>
+                <thead>
+                    <table id="homework">
+                        <colgroup>
+                            <col id="col-assignments">
+                            <col id="col-released">
+                            <col id="col-due">
+                            <col id="col-submissions">
+                            <col id="col-graded">
+                            <col id="col-published">
+                            <col id="col-regrade">
+                          </colgroup>
+                          <tr>
+                            <th>Active Assignments</th>
+                            <th>Released</th>
+                            <th>Due</th>
+                            <th>Submissions</th>
+                            <th>Graded</th>
+                            <th>Published</th>
+                            <th>Regraded</th>
+                          </tr>
+                        <tr>
+                            <td>HW5</td>
+                            <td class="released">
+                              <meter min="0" max="100" value="75"></meter>
+                              <time>JUL 26 AT 12:00 AM</time>
+                            </td>
+                            <td class="due">
+                              <time>JUL 30 AT 11:59PM</time>
+                            </td>
+                            <td>10</td>
+                            <td class="graded">
+                            <meter min="0" max="100" value="75"></meter>
+                            <p>75%</p>
+                            </td>                            <td>
+                              <input type="checkbox" checked disabled />
+                            </td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>HW5</td>
+                            <td class="released">
+                              <meter min="0" max="100" value="75"></meter>
+                              <time>JUL 26 AT 12:00 AM</time>
+                            </td>
+                            <td class="due">
+                              <time>JUL 30 AT 11:59PM</time>
+                            </td>
+                            <td>10</td>
+                            <td class="graded">
+                                <meter min="0" max="100" value="25"></meter>
+                                <p>25%</p>
+                              </td>
+                            <td>
+                              <input type="checkbox" checked disabled />
+                            </td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>HW5</td>
+                            <td class="released">
+                              <meter min="0" max="100" value="75"></meter>
+                              <time>JUL 26 AT 12:00 AM</time>
+                            </td>
+                            <td class="due">
+                              <time>JUL 30 AT 11:59PM</time>
+                            </td>
+                            <td>10</td>
+                            <td class="graded">
+                                <meter min="0" max="100" value="0"></meter>
+                                <p>0%</p>
+                              </td>
+                            <td>
+                              <input type="checkbox" checked disabled />
+                            </td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>HW5</td>
+                            <td class="released">
+                              <meter min="0" max="100" value="75"></meter>
+                              <time>JUL 26 AT 12:00 AM</time>
+                            </td>
+                            <td class="due">
+                              <time>JUL 30 AT 11:59PM</time>
+                            </td>
+                            <td>10</td>
+                            <td class="graded">
+                                <meter min="0" max="100" value="25"></meter>
+                                <p>25%</p>
+                              </td>                            <td>
+                              <input type="checkbox" checked disabled />
+                            </td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>HW5</td>
+                            <td class="released">
+                              <meter min="0" max="100" value="75"></meter>
+                              <time>JUL 26 AT 12:00 AM</time>
+                            </td>
+                            <td class="due">
+                              <time>JUL 30 AT 11:59PM</time>
+                            </td>
+                            <td>10</td>
+                            <td class="graded">
+                                <meter min="0" max="100" value="75"></meter>
+                                <p>75%</p>
+                              </td>                            <td>
+                              <input type="checkbox" checked disabled />
+                            </td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>HW5</td>
+                            <td class="released">
+                              <meter min="0" max="100" value="75"></meter>
+                              <time>JUL 26 AT 12:00 AM</time>
+                            </td>
+                            <td class="due">
+                              <time>JUL 30 AT 11:59PM</time>
+                            </td>
+                            <td>10</td>
+                            <td class="graded">
+                                <meter min="0" max="100" value="75"></meter>
+                                <p>75%</p>
+                              </td>                            <td>
+                              <input type="checkbox" checked disabled />
+                            </td>
+                            <td>No</td>
+                        </tr>
+                      </table>
+                </thead>
+               
             </div>
 			
 			

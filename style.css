@@ -278,7 +278,7 @@ main .data {
 main .data .content-data {
 	flex-grow: 1;
 	flex-basis: 400px;
-	padding: 10px 2px;
+	padding: 0px 2px 30px;
 }
 main .content-data .head {
 	display: flex;
@@ -296,36 +296,108 @@ main .content-data .head p {
 	font-weight: 600;
     margin: 2px 20px;
 }
+.content-data span{
+    color:#1ca0a0;
+    font-weight: 600;
+}
+.content-data a{
+    color:black;
+}
 table {
     border-collapse: collapse;
     width: 100%;
-  }
+}
   
-  th, td {
+th, td {
     text-align: left;
-    padding: 8px;
-  }
+    padding: 7px;
+}
   
-  tr:nth-child(even) {background-color: rgb(249, 249, 249);}
+tr:nth-child(even) {background-color: rgb(249, 249, 249);}
 /* MAIN */
 
 /* CONTENT */
 
-meter {
-    width: 500px;
+#col-assignments {
+    width: 20%;
+}
+  
+  #col-released {
+    width: 15%;
+  }
+  
+  #col-due {
+    width: 15%;
+  }
+  
+  #col-submissions {
+    width: 10%;
+  }
+  
+  #col-graded {
+    width: 10%;
+  }
+  
+  #col-published {
+    width: 15%;
+  }
+  
+  #col-regrade {
+    width: 15%;
+  }
+.released meter {
+    transform: scaleX(-1);
+    width: calc(200% + 3px);
     height: 25px;
     border: 1px solid #ccc;
     color:#1ca0a0;
     border-radius: 3px;
-    display: block;
     margin: 0 auto;
 }
+.graded meter{
+    width: calc(100% + 3px);
+    height: 25px;
+    border: 1px solid #ccc;
+    color:#1ca0a0;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+.graded p{
+    text-align: right;
+}
+td {
+    text-align: center;
+}
+td.due time {
+    display: block;
+    padding-top: 20px;
+    text-align: right;
+  }
+  
+  
+  input[type="checkbox"]::before {
+    content: '';
+    align-items: center;
+    background-color: #1ca0a0;
+    border: 1px solid gray;
+    border-radius: 50%;
+    height: 20px;
+    opacity: 1;
+    margin: -4px 0 0 -4px;
+    position: absolute;
+    width: 20px;
+  }
+#name td {
+    text-align: left;
+}
 #homework th{
+    text-align: left;
     color:#333;
     font-size: 13px;
 	font-weight: 600;
 }
 #homework td{
+text-align: center;
     color:#333;
     font-size: 13px;
 	font-weight: 600;
@@ -335,7 +407,6 @@ meter {
     font-size: 12px;
 	font-weight: 600;
     margin: 0 auto ;
-    width: 500px;
 }
 meter::-webkit-meter-optimum-value {
     background: #1ca0a0; /* Green */
